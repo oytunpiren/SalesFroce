@@ -10,8 +10,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 glue = "step_defonations",
-features = "src/main/resources/features"
-
+features = "src/main/resources/features",
+tags = "@view_orders",
+dryRun= true
 )
 
 

@@ -8,6 +8,6 @@ public class Hooks {
     @After
     public void tearDwon(){
         System.out.println("Closing browser");
-        Driver.getDriver().quit();
+        Driver.closeDriver();
     }
 }

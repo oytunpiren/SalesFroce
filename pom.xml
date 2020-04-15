@@ -17,8 +17,25 @@
                     <target>7</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <configuration>
+                    <parallel>classes</parallel>
+                    <threadCount>2</threadCount>
+                    <forkMode>perthread</forkMode>
+                    <includes>
+                        <include>**/*CukesRunner*.java</include>
+                    </includes>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+
 
     <dependencies>
 
