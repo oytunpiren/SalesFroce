@@ -1,5 +1,6 @@
 package runners;
 
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -7,14 +8,15 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin ={ "json:target/cucumber1.json", "html:target/cucumber-html-report",
-        "rerun:target/rerun.txt"},
+                "rerun:target/rerun.txt"},
         glue = "step_definitions",
-        features = "src/main/resources/features",
-        tags = "@view_orders",
-        dryRun = false
+        features = {"@target/rerun.txt"}
+
+
+
 
 
 )
-public class CukesRunner {
 
+public class RerunFailed {
 }
