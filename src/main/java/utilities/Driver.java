@@ -15,31 +15,32 @@ public class Driver {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            String browser = ConfigurationReader.getProperty("browser");
+            String browser = "";
+            if (System.getProperty("browser") == null) {
+                browser = ConfigurationReader.getProperty("browser");
+            } else {
+                browser = System.getProperty("browser");
+            }
             switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     break;
-
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
                 default:
-                    throw new RuntimeException("Wring Browser Name!!!");
+                    throw new RuntimeException("Wrong browser name!");
             }
         }
-
-return driver;
-
+        return driver;
     }
-    public static void  closeDriver () {
-        if(driver!=null){
+
+    public static void closeDriver() {
+        if (driver != null) {
             driver.quit();
-            driver=null;
+            driver = null;
         }
     }
-
-
 }

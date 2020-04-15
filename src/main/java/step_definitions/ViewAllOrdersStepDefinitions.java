@@ -1,10 +1,10 @@
-package step_definations;
+package step_definitions;
 
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.ViewAllOrders;
 
-public class ViewAllOrdersStepDefinations {
+public class ViewAllOrdersStepDefinitions {
     ViewAllOrders viewAllOrders = new ViewAllOrders();
 
     //And user verifies that "List of All Orders" table-title is displayed
@@ -13,4 +13,5 @@ public class ViewAllOrdersStepDefinations {
         String actual = viewAllOrders.tableTitleElement.getText().trim();
         Assert.assertEquals(string, actual);
     }
+
 }

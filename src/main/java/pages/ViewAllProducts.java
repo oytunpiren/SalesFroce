@@ -1,4 +1,4 @@
 package pages;
 
-public class ViewAllProducts extends BasePage {
+public class ViewAllProducts extends BasePage{
 }
