@@ -1,6 +1,7 @@
 package step_definitions;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.GooglePage;
@@ -20,10 +21,12 @@ public class GoogleSearch_StepDefinations {
 
     }
 
-    @Then("user search product")
-    public void user_search_product() {
-        googlePage.searchBox.sendKeys("wooden spoon");
-        googlePage.clickButton.click();
+    @Then("user search {string}")
+    public void user_search(String string) {
+        googlePage.searchBox.sendKeys(string, Keys.ENTER);
+
+
+
 
     }
 }

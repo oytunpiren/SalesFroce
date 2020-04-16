@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.GooglePage;
 
+import java.security.PublicKey;
 import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
@@ -30,5 +31,12 @@ public class SeleniumUtilies {
                 .pollingEvery(Duration.ofSeconds(3)).ignoring(NoSuchElementException.class);
     }
 
+    public static void wait1 (int seconds) {
+        try{
+            Thread.sleep(seconds*1000);
+        }catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
