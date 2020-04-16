@@ -13,6 +13,4 @@ public class GooglePage extends BasePage{
     public WebElement clickButton;
 
 
-
-
 }
