@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         plugin ={ "json:target/cucumber1.json", "html:target/cucumber-html-report",
                 "rerun:target/rerun.txt"},
         glue = "step_definitions",
-        features = {"@target/rerun.txt"}
+        features = "@target/rerun.txt"
 
 
 

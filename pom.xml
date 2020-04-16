@@ -32,9 +32,9 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M3</version>
                     <configuration>
-                        <parallel>classes</parallel>
-                        <threadCount>2</threadCount>
-                        <forkMode>perthread</forkMode>
+            <!--            <parallel>classes</parallel> -->
+                    <!--   <threadCount>2</threadCount> -->
+                        <!-- <forkMode>perthread</forkMode> -->
                         <includes>
                             <include>**/*CukesRunner*.java</include>
                         </includes>
