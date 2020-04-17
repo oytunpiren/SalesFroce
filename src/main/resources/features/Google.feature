@@ -1,6 +1,7 @@
+@google
 Feature: Google Search Function
 
-  @google
+
   Scenario Outline: User able to search
     Given User go to website
     Then user search "<product>"
@@ -10,3 +11,10 @@ Feature: Google Search Function
       | wooden spoon  |
       | apple macbook |
       | cartier watch |
+
+  Scenario: User able to search
+    Given user go to website
+    Then user create a account
+      | wooden spoon  |
+    Then verify
+
